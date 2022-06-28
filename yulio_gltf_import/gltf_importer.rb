@@ -268,9 +268,7 @@ module Yulio
 				trans = Geom::Transformation.new
 				
 				# rotate the model from OpenGL to Sketchup axis representations
-				trans = trans * Geom::Transformation.rotation([0,0,0], [0,1,0], Math::PI)
-				trans = trans * Geom::Transformation.rotation([0,0,0], [1,0,0], -Math::PI/2.0)
-				trans = trans * Geom::Transformation.rotation([0,0,0], [0,0,1], Math::PI)
+				trans = trans * Geom::Transformation.rotation([0,0,0], [1,0,0], Math::PI/2.0)
 				
 				# scale the final model from metres to inches
 				n = 39.37008
